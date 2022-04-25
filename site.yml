@@ -1,0 +1,12 @@
+---
+- name: Configure System
+  hosts: localhost
+  become: yes
+  roles:
+    - system
+
+- name: Install Gateman
+  hosts: localhost
+  become: yes
+  roles:
+    - gateman
