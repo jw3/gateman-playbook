@@ -1,0 +1,22 @@
+---
+
+- name: Download Gateman release
+  get_url:
+    src: https://github.com/hicktech/gateman/releases/download/v{{ gateman_version }}/gateman-x86_64-unknown-linux-musl
+    dest: /usr/local/bin
+    remote_src: yes
+    mode: '0755'
+    owner: root
+
+- name: Install Gateman service
+  copy:
+    src: files/gateman.service
+    dest: /etc/systemd/system
+    mode: '0644'
+    owner: root
+
+- name: Start Gateman service
+  systemd:
+    name: gateman
+    state: started
+    enabled: yes

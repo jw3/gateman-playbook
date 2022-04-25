@@ -1,0 +1,8 @@
+[Unit]
+Description=Gateman Daemon
+
+[Service]
+ExecStart=/usr/local/bin/gateman
+
+[Install]
+WantedBy=multi-user.target
