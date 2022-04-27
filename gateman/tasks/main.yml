@@ -2,7 +2,7 @@
 
 - name: Download Gateman release
   get_url:
-    src: https://github.com/hicktech/gateman/releases/download/v{{ gateman_version }}/gateman-x86_64-unknown-linux-musl
+    src: https://github.com/hicktech/gateman/releases/download/v{{ gateman_version }}/gateman-armv7-unknown-linux-gnueabihf
     dest: /usr/local/bin
     remote_src: yes
     mode: '0755'
