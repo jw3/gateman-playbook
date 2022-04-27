@@ -1,4 +1,9 @@
 ---
+- name: Configure GPIO (BCM) 12 as PWM0
+  lineinfile:
+    path: /boot/config.txt
+    line: "dtoverlay=pwm,pin=12,func=4"
+
 - name: Stop dhcpcd
   service:
     name: dhcpcd
