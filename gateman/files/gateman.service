@@ -1,8 +1,8 @@
 [Unit]
-Description=Gateman Daemon
+Description=Gateman
 
 [Service]
-ExecStart=/usr/local/bin/gateman
+ExecStart=/usr/local/bin/gateman --address 0.0.0.0 --port 9000
 
 [Install]
 WantedBy=multi-user.target
